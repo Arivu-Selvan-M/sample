@@ -1,0 +1,11 @@
+.module-layout {
+  display: flex;
+  gap: 0;
+  min-height: calc(100vh - 60px);
+  flex-grow: 1;
+}
+
+.module-content-area {
+  flex-grow: 1;
+  overflow-y: auto;
+}

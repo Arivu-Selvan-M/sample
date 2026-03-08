@@ -1,0 +1,38 @@
+.module-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+}
+
+.content-box {
+  background: white;
+  border: 1px solid #dcdfe6;
+  border-radius: 6px;
+  padding: 20px;
+
+  h2 {
+    color: #333;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<div class="overlay" *ngIf="display">
+  <div class="dialog-box">
+    <div class="header">
+      <p>{{ dialogConfig?.title }}</p>
+    </div>
+
+    <div class="body">
+      <p>{{ dialogConfig?.message }}</p>
+    </div>
+
+    <div class="footer">
+      <button (click)="onCancel()" class="btn-secondary">Cancel</button>
+      <button (click)="onConfirm()" class="btn-primary">Confirm</button>
+    </div>
+  </div>
+</div>

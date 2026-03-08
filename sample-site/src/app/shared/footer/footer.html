@@ -1,0 +1,13 @@
+<footer class="shared-footer">
+  <div class="footer-content">
+    <div class="footer-buttons" *ngIf="buttons.length > 0">
+      <button 
+        *ngFor="let button of buttons"
+        class="btn"
+        [class.btn-primary]="button.isPrimary"
+        (click)="onButtonClick(button.action)">
+        {{ button.label }}
+      </button>
+    </div>
+  </div>
+</footer>

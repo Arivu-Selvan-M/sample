@@ -1,0 +1,176 @@
+/* --- Application UI Style Guide - Design Tokens --- */
+
+/* 1. Global Color Palette */
+$color-header-bg: #16152a;
+$color-header-text: #ffffff;
+$color-header-link: #e0e0ff;
+$color-sidebar-bg: #324359;
+$color-sidebar-text: #e4e8ef;
+$color-sidebar-active-bg: #3f5471;
+$color-content-bg: #f5f6fa;
+$color-primary: #4c6ef5;
+$color-secondary-bg: #f1f3f5;
+$color-secondary-border: #dcdfe6;
+$color-dialog-bg: #ffffff;
+$color-overlay: rgba(0,0,0,0.45);
+$base-color: #2c2c2c;
+
+/* 2. Typography Tokens */
+$font-family: 'Inter', 'Roboto', Arial, sans-serif;
+$base-font-size: 14px;
+$base-line-height: 1.5;
+
+$font-size-h1: 28px;
+$font-size-h2: 24px;
+$font-size-h3: 20px;
+$font-size-h4: 18px;
+$font-size-body: 14px;
+$font-size-small: 12px;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+
+/* 3. Spacing System */
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+/* 4. Component Dimensions */
+$header-height: 60px;
+$sidebar-width: 240px;
+$menu-item-height: 44px;
+$button-height: 36px;
+$input-height: 36px;
+$dialog-footer-height: 56px;
+
+/* 5. Border Radius */
+$border-radius-sm: 4px;
+$border-radius-md: 6px;
+$border-radius-lg: 8px;
+
+/* 6. Shadow System */
+$shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+$shadow-md: 0 4px 12px rgba(0,0,0,0.12);
+$shadow-lg: 0 8px 24px rgba(0,0,0,0.2);
+
+/* --- Global Base Styles --- */
+
+/* 1. Root HTML & Body Setup */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Global Typography */
+body {
+  font-family: $font-family;
+  font-size: $base-font-size;
+  color: $base-color;
+  line-height: $base-line-height;
+  background: $color-content-bg;
+}
+
+app-root {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+h1 { font-size: $font-size-h1; font-weight: $font-weight-semibold; margin: 0 0 16px 0; }
+h2 { font-size: $font-size-h2; font-weight: $font-weight-semibold; margin: 0 0 16px 0; }
+h3 { font-size: $font-size-h3; font-weight: $font-weight-semibold; margin: 0 0 8px 0; }
+h4 { font-size: $font-size-h4; font-weight: $font-weight-semibold; margin: 0; }
+small, .small { font-size: $font-size-small; }
+
+/* 5. Global Button Styles */
+button {
+  font-family: $font-family;
+  font-size: $base-font-size;
+}
+
+.btn-primary {
+  background: $color-primary;
+  color: #ffffff;
+  height: $button-height;
+  padding: 0 16px;
+  border-radius: $border-radius-md;
+  border: none;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.85;
+  }
+}
+
+.btn-secondary {
+  background: $color-secondary-bg;
+  color: #333;
+  height: $button-height;
+  padding: 0 16px;
+  border-radius: $border-radius-md;
+  border: 1px solid $color-secondary-border;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #e9ecef;
+  }
+
+  &:active {
+    background: #dee2e6;
+  }
+}
+
+/* 6. Form Field Styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  height: $input-height;
+  padding: 0 12px;
+  border: 1px solid $color-secondary-border;
+  border-radius: $border-radius-md;
+  font-family: $font-family;
+  font-size: $base-font-size;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+    box-shadow: 0 0 0 2px rgba(76, 110, 245, 0.1);
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* 7. Card / Container Styles */
+.card {
+  background: $color-dialog-bg;
+  border-radius: $border-radius-lg;
+  padding: 20px;
+  box-shadow: $shadow-sm;
+}
+
+/* 8. Utility Classes */
+.mr-sm { margin-right: $spacing-sm; }
+.mb-sm { margin-bottom: $spacing-sm; }
+.mb-md { margin-bottom: $spacing-md; }
+.mb-lg { margin-bottom: $spacing-lg; }
+.p-md { padding: $spacing-md; }
+.p-lg { padding: $spacing-lg; }
