@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 })
 export class MemberComponent {
   memberMenu = [
-    { label: 'Profile', link: 'profile' },
-    { label: 'Settings', link: 'settings' }
+    { label: 'Dashboard', link: '/member/dashboard' },
+    { label: 'Profile', link: '/member/profile' },
+    { label: 'Settings', link: '/member/settings' }
   ];
 }

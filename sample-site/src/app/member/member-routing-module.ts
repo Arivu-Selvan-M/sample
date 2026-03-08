@@ -8,18 +8,13 @@ import { SettingsComponent } from './settings/settings';
 
 const routes: Routes = [
   {
-    path: 'member',
+    path: '',
+    component: MemberComponent,
     children: [
-      { path: '', component: DashboardComponent },
-      {
-        path: 'module',
-        component: MemberComponent,
-        children: [
-          { path: 'profile', component: ProfileComponent },
-          { path: 'settings', component: SettingsComponent },
-          { path: '', redirectTo: 'profile', pathMatch: 'full' }
-        ]
-      }
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'settings', component: SettingsComponent },
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ]
   }
 ];

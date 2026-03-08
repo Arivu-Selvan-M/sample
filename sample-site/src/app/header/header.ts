@@ -11,7 +11,7 @@ export class HeaderComponent {
   constructor(private router: Router) {}
 
   goToMember() {
-    this.router.navigate(['/member/module']);
+    this.router.navigate(['/member/profile']);
   }
 
   goToBilling() {
@@ -23,6 +23,6 @@ export class HeaderComponent {
   }
 
   goDashboard() {
-    this.router.navigate(['/member']);
+    this.router.navigate(['/member/dashboard']);
   }
 }

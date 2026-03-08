@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 })
 export class PaymentComponent {
   paymentMenu = [
-    { label: 'Transactions', link: 'transactions' },
-    { label: 'Methods', link: 'methods' }
+    { label: 'Transactions', link: '/payment/transactions' },
+    { label: 'Methods', link: '/payment/methods' }
   ];
 }
 
