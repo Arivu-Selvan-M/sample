@@ -6,7 +6,7 @@ import { BillingPaymentsComponent } from './payments/payments';
 
 const routes: Routes = [
   {
-    path: 'billing',
+    path: '',
     component: BillingComponent,
     children: [
       { path: 'invoices', component: InvoicesComponent },

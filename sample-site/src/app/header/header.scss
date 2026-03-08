@@ -1,14 +1,21 @@
+:host {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+}
+
 header {
   background-color: #16152a;
   height: 60px;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  padding: 0 20px;
+  padding: 0 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 100%;
 }
 
 .header-content {
@@ -16,18 +23,18 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 30px;
+  gap: 24px;
 
   h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 28px;
     white-space: nowrap;
   }
 }
 
 .nav-buttons {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 
   .nav-btn {
     background-color: transparent;
@@ -47,5 +54,3 @@ header {
     }
   }
 }
-
- 

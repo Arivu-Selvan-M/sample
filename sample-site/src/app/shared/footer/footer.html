@@ -1,7 +1,8 @@
 <footer class="shared-footer">
   <div class="footer-content">
+    <p class="footer-text" *ngIf="showCopyright">&copy; 2026 Super Duper Barnacle</p>
     <div class="footer-buttons" *ngIf="buttons.length > 0">
-      <button 
+      <button
         *ngFor="let button of buttons"
         class="btn"
         [class.btn-primary]="button.isPrimary"
