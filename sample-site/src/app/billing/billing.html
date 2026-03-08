@@ -1,8 +1,12 @@
 <div class="module-layout">
-  <app-sidebar [menuItems]="billingMenu"></app-sidebar>
-  <main class="module-content-area">
-    <router-outlet></router-outlet>
-  </main>
+  <div class="module-flex-wrapper">
+    <app-sidebar [menuItems]="billingMenu"></app-sidebar>
+    <div class="module-right-section">
+      <main class="module-content-area">
+        <router-outlet></router-outlet>
+      </main>
+      <app-footer [buttons]="footerButtons" (buttonClicked)="onFooterButtonClick($event)"></app-footer>
+    </div>
+  </div>
 </div>
-
 

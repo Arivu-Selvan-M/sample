@@ -6,12 +6,14 @@ import { SharedModule } from '../shared/shared-module';
 import { BillingComponent } from './billing';
 import { InvoicesComponent } from './invoices/invoices';
 import { BillingPaymentsComponent } from './payments/payments';
+import { BillingFooterComponent } from './billing-footer/billing-footer';
 
 @NgModule({
   declarations: [
     BillingComponent,
     InvoicesComponent,
-    BillingPaymentsComponent
+    BillingPaymentsComponent,
+    BillingFooterComponent
   ],
   imports: [CommonModule, BillingRoutingModule, SharedModule],
 })
