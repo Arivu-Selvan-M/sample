@@ -1,9 +1,21 @@
-<div class="module-layout">
+<!-- <div class="module-layout">
   <div class="module-flex-wrapper">
     <app-sidebar [menuItems]="memberMenu"></app-sidebar>
     <div class="module-right-section">
       <main class="module-content-area">
         <router-outlet></router-outlet>
+      </main>
+      <app-footer [buttons]="footerButtons" (buttonClicked)="onFooterButtonClick($event)"></app-footer>
+    </div>
+  </div>
+</div> -->
+
+<div class="module-layout">
+  <div class="module-flex-wrapper">
+    <app-sidebar [menuItems]="memberMenu"></app-sidebar>
+    <div class="module-right-section">
+      <main class="module-content-area">
+        <router-outlet (activate)="onChildActivate($event)"></router-outlet>
       </main>
       <app-footer [buttons]="footerButtons" (buttonClicked)="onFooterButtonClick($event)"></app-footer>
     </div>

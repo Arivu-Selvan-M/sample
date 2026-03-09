@@ -1,3 +1,167 @@
 <div class="module-content">
   <h1>Member Profile</h1>
+  
+  <form #profileForm="ngForm" class="profile-form">
+    
+    <div class="form-group">
+      <label for="userName">User Name</label>
+      <input 
+        type="text" 
+        id="userName"
+        name="userName" 
+        [(ngModel)]="profileData.userName" 
+        #userName="ngModel" 
+        required 
+        minlength="2"
+        pattern="^[a-zA-Z\s]*$"
+        class="form-control"
+        placeholder="Enter your name">
+      
+      <div *ngIf="userName.invalid && (userName.dirty || userName.touched)" class="error-msg">
+        <small *ngIf="userName.errors?.['required']">Name is required.</small>
+        <small *ngIf="userName.errors?.['minlength']">Name must be at least 2 characters long.</small>
+        <small *ngIf="userName.errors?.['pattern']">Only alphabets and spaces are allowed.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="dept">Department</label>
+      <input 
+        type="text" 
+        id="dept"
+        name="dept" 
+        [(ngModel)]="profileData.dept" 
+        #dept="ngModel"
+        required 
+        class="form-control"
+        placeholder="Enter your department">
+      
+      <div *ngIf="dept.invalid && (dept.dirty || dept.touched)" class="error-msg">
+        <small *ngIf="dept.errors?.['required']">Department is required.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input 
+        type="email" 
+        id="email"
+        name="email" 
+        [(ngModel)]="profileData.email" 
+        #email="ngModel"
+        required email
+        class="form-control"
+        placeholder="example@domain.com">
+      
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-msg">
+        <small *ngIf="email.errors?.['required']">Email is required.</small>
+        <small *ngIf="email.errors?.['email']">Please enter a valid email address.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="mobile">Mobile Number</label>
+      <input 
+        type="text" 
+        id="mobile"
+        name="mobile" 
+        [(ngModel)]="profileData.mobile" 
+        #mobile="ngModel"
+        required
+        pattern="^[0-9]{10}$"
+        class="form-control"
+        placeholder="Enter 10-digit mobile number">
+      
+      <div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)" class="error-msg">
+        <small *ngIf="mobile.errors?.['required']">Mobile number is required.</small>
+        <small *ngIf="mobile.errors?.['pattern']">Please enter a valid 10-digit mobile number.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="designation">Designation</label>
+      <input 
+        type="text" 
+        id="designation"
+        name="designation" 
+        [(ngModel)]="profileData.designation" 
+        #designation="ngModel"
+        required
+        class="form-control"
+        placeholder="e.g. Senior Developer">
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address</label>
+      <textarea 
+        id="address"
+        name="address" 
+        [(ngModel)]="profileData.address" 
+        #address="ngModel"
+        required
+        class="form-control"
+        rows="3"
+        placeholder="Enter your full address"></textarea>
+      <div *ngIf="address.invalid && (address.dirty || address.touched)" class="error-msg">
+        <small>Address is required.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="country">Country</label>
+      <select 
+        id="country"
+        name="country" 
+        [(ngModel)]="profileData.country" 
+        #country="ngModel"
+        required
+        class="form-control">
+        <option value="">-- Select Country --</option>
+        <option value="USA">USA</option>
+        <option value="India">India</option>
+        <option value="UK">UK</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Gender</label>
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="gender" value="male" [(ngModel)]="profileData.gender" required> Male
+        </label>
+        <label>
+          <input type="radio" name="gender" value="female" [(ngModel)]="profileData.gender" required> Female
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group">
+  <label for="dob">Date of Birth</label>
+  <input 
+    type="date" 
+    id="dob"
+    name="dob" 
+    [(ngModel)]="profileData.dob" 
+    #dob="ngModel"
+    required
+    [max]="maxDate"
+    class="form-control">
+  
+  <div *ngIf="dob.invalid && (dob.dirty || dob.touched)" class="error-msg">
+    <small *ngIf="dob.errors?.['required']">Date of Birth is required.</small>
+  </div>
+</div>
+
+    <div class="form-group">
+      <div class="checkbox-wrapper">
+        <input 
+          type="checkbox" 
+          id="subscribe"
+          name="subscribe" 
+          [(ngModel)]="profileData.subscribe">
+        <label for="subscribe">Subscribe to newsletter</label>
+      </div>
+    </div>
+
+  </form>
 </div>
