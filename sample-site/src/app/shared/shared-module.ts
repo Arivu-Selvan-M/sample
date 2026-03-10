@@ -5,12 +5,14 @@ import { RouterModule } from '@angular/router';
 import { DialogComponent } from './dialog/dialog';
 import { SidebarComponent } from './sidebar/sidebar';
 import { FooterComponent } from './footer/footer';
+import { PageNotFoundComponent } from './page-not-found/page-not-found';
 
 @NgModule({
   declarations: [
     DialogComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { FooterComponent } from './footer/footer';
   exports: [
     DialogComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
   ]
 })
 export class SharedModule { }

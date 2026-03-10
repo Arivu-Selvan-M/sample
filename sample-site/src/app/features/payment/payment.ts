@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { DialogService } from '../shared/dialog/dialog.service';
-import { FooterButton } from '../shared/footer/footer';
+import { DialogService } from '../../shared/dialog/dialog.service';
+import { FooterButton } from '../../shared/footer/footer';
 
 @Component({
   selector: 'app-payment',

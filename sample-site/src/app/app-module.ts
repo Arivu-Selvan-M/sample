@@ -4,20 +4,18 @@ import { AppRoutingModule } from './app-routing-module';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app';
-import { HeaderComponent } from './header/header';
-import { PageNotFoundComponent } from './page-not-found/page-not-found';
+import { CoreModule } from './core/core-module';
 import { SharedModule } from './shared/shared-module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    PageNotFoundComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
+    CoreModule,
     SharedModule
   ],
   providers: [],

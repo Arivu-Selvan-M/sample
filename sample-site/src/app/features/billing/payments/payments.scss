@@ -1,0 +1,50 @@
+.module-content {
+  padding: 16px;
+
+  h1 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+}
+
+.payment-form {
+  max-width: 400px;
+  margin-bottom: 20px;
+
+  .form-group {
+    margin-bottom: 16px;
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 500;
+      color: #555;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+
+      &:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .error {
+      color: #dc3545;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+  }
+}

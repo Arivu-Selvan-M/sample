@@ -1,0 +1,41 @@
+<div class="module-content">
+  <h1>Billing Payments</h1>
+  
+  <form [formGroup]="paymentForm" class="payment-form">
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" formControlName="amount" step="0.01" min="0">
+      <div *ngIf="paymentForm.get('amount')?.invalid && paymentForm.get('amount')?.touched" class="error">
+        Amount is required and must be greater than 0.
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <input type="date" id="date" formControlName="date">
+      <div *ngIf="paymentForm.get('date')?.invalid && paymentForm.get('date')?.touched" class="error">
+        Date is required.
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="method">Payment Method:</label>
+      <select id="method" formControlName="method">
+        <option value="">Select Method</option>
+        <option value="credit_card">Credit Card</option>
+        <option value="debit_card">Debit Card</option>
+        <option value="bank_transfer">Bank Transfer</option>
+        <option value="cash">Cash</option>
+      </select>
+      <div *ngIf="paymentForm.get('method')?.invalid && paymentForm.get('method')?.touched" class="error">
+        Payment method is required.
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description" rows="3"></textarea>
+    </div>
+  </form>
+  
+</div>
